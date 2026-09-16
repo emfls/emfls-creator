@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {guides} from '../../data/guides';
+export function getStaticPaths(){return Object.keys(guides).map(slug=>({params:{slug},props:{guide:guides[slug]}}))}
+const {guide}=Astro.props;
+---
+<BaseLayout title={guide[0]}><article class="prose shell"><div class="eyebrow">Creator guide</div><h1>{guide[0]}</h1><p class="lede">{guide[1]}</p><h2>Start with the reader’s decision</h2><p>Before choosing a format, write down what the reader should understand, decide, or do. This keeps the work useful when the draft gets longer.</p><h2>Make the shape visible</h2><p>Use a brief to name the audience, core question, sections, examples, and next action. The <a href="/tools/content-brief/">Content Brief Builder</a> can help you make that structure concrete.</p><h2>Check the promise</h2><ul><li>Does the opening match the title?</li><li>Can someone scan the structure?</li><li>Is there a specific next step?</li></ul><p><a href="/tools/publish-checklist/">Run the publishing checklist →</a></p></article></BaseLayout>

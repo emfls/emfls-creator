@@ -1,0 +1,6 @@
+---
+import '../styles/global.css';
+const {title='Creator Workspace',description='Plan, shape, and publish better content.'}=Astro.props;
+const canonical = new URL(Astro.url.pathname, 'https://creator.emfls.com').toString();
+---
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><title>{title} — EMFLS Creator</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta property="og:title" content={`${title} — EMFLS Creator`}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/></head><body><a class="skip" href="#main">Skip to content</a><header><div class="shell nav"><a class="brand" href="/">emfls<span>/creator</span></a><nav aria-label="Primary"><a href="/tools/">Tools</a><a href="/guides/">Guides</a><a href="/workflow/">Workflow</a><a href="/about/">About</a></nav></div></header><main id="main"><slot/></main><footer class="footer"><div class="shell">© 2026 EMFLS Creator · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a> · <a href="/editorial-policy/">Editorial policy</a></div></footer></body></html>

@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const tools=[['Headline Workshop','Compose and assess title candidates.','/tools/headline-workshop/'],['Content Brief Builder','Create a focused, copyable brief.','/tools/content-brief/'],['Platform Reference','Check formats and limits with sources.','/tools/platform-reference/'],['Publishing Checklist','Run a saved pre-publish review.','/tools/publish-checklist/']];
+---
+<BaseLayout title="Creator Tools"><section class="section shell"><div class="eyebrow">Creator tools</div><h1>Less tab-switching. More making.</h1><p class="lede">Small, client-side tools for the decisions that shape a piece of content.</p><div class="grid">{tools.map(([name,desc,href])=><a class="card" href={href}><div class="kicker">TOOL</div><h3>{name}</h3><p>{desc}</p><span>Open tool →</span></a>)}</div></section></BaseLayout>

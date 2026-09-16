@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../../../src/layouts/BaseLayout.astro';
+const rows=[['YouTube title','Keep the promise clear before optimizing length.','YouTube Help','2026-09-16'],['Instagram portrait','Check the current in-app crop preview before export.','Instagram Help Center','2026-09-16'],['Blog image','Use descriptive alt text and a compressed original.','W3C WAI','2026-09-16']];
+---
+<BaseLayout title="Platform Reference"><section class="section shell"><div class="eyebrow">Tool 03</div><h1>Platform Reference</h1><p class="lede">A small, dated reference for production decisions. Platform details change, so always verify against the source before publishing.</p><div class="grid">{rows.map(r=><div class="card"><div class="kicker">CHECKED {r[3]}</div><h3>{r[0]}</h3><p>{r[1]}</p><small>Source: {r[2]}</small></div>)}</div></section></BaseLayout>
