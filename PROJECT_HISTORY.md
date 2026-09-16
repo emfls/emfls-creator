@@ -16,3 +16,14 @@
 - Live QA / Visual QA: Not run because `creator.emfls.com` has no Production deployment yet. Screenshots: none.
 - Known Issues: Cloudflare Pages/custom domain, production-only analytics, Search Launch, AdSense, and viewport snapshots remain pending. `npm install` reports 3 dependency audit findings; no forced audit fix applied.
 - Next Action: connect Cloudflare Pages and perform Production/320/390/1440 QA after external setup.
+
+## 2026-09-16 — Initial build local QA
+
+- Objective: Creator 초기 구축을 최신 Site Control Page v2 Definition of Done에 맞춰 검증.
+- Code QA: `npm run check` PASS (0 errors). `npm run build` PASS (21 static pages).
+- Local Live QA: Preview에서 Home, Tools 4개, Guides, Workflow, Trust pages, `/robots.txt`, `/sitemap.xml` 모두 HTTP 200; invalid route HTTP 404; robots가 `https://creator.emfls.com/sitemap.xml`을 선언; generated canonical은 `creator.emfls.com` 기준.
+- Visual QA: Production과 고정 viewport 환경이 아직 없어 미실행. 320/390/1440 snapshot 없음.
+- Tool QA: Headline Workshop, Content Brief, Publishing Checklist는 client-side interaction 코드를 포함하며 Production 브라우저 확인은 배포 후 수행한다.
+- Changed Files: source/layout/style, docs, `package.json`, `package-lock.json`.
+- Images/assets: 추가 없음. 초기 workspace layout에 필수 이미지가 없어 생성/복사하지 않음.
+- Known Issues / Blocker: Cloudflare Pages 연결, `creator.emfls.com` Production, GA4/Search/AdSense 외부 검증, Visual QA는 외부 설정 후 진행.
